@@ -146,8 +146,8 @@ public class Messenger {
 		var delCount:int; // = 0;
 		if (messageRegistry[type]) {
 			messageList = messageRegistry[type];
-			var mesageCount:int = messageList.length;
-			for (var i:int; i < mesageCount; i++) {
+			var mesageCount:int = messageList.length;   //It's possible to add the same message type inside of the loop
+			for (var i:int; i < messageList.length; i++) {
 				handlerVo = messageList[i];
 				// check if message is not marked to be removed. (disabled)
 				if (handlerVo == null) {
