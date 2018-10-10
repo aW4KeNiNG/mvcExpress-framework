@@ -157,7 +157,8 @@ public class Messenger {
 
 					// if some MsgVOs marked to be removed - move all other constants to there place.
 					if (delCount) {
-						messageList[i - delCount] = messageList[i];
+						messageList[i - delCount] = handlerVo;
+                        messageList[i] = null;
 					}
 
 					// check if handling function handles commands.
